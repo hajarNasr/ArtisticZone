@@ -25,8 +25,12 @@ const startFetchingAction = ()=>({
     type: START_FETCHING
 });
 export const getAllCategroyItems = (category, limit)=>{
+    const route = limit? 
+                  `/api/items/all/${category}/${limit}/`
+                  :
+                  `/api/items/all/${category}/`;
     return dispatch =>{
-        axios.get(`/api/items/all/${category}/${limit}/`, config)
+        axios.get(route, config)
              .then(res=>{
                limit?
                dispatch(first8ItemsOf(category, res.data))

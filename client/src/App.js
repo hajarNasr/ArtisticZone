@@ -33,7 +33,6 @@ const App = ()=>{
                                             id={obj.id}
                                             showCustomHeader= {true}
                                             className={obj.className}
-                                            limit={4}
                                     />}/>
             )}
 
