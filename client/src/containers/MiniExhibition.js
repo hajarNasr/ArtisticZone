@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Exhibition from './Exhibition';
 import '../css/containers/mini-exhibition.css';
 
-const MiniExhibition = ({category, className, id})=>{
+const MiniExhibition = ({category, route, id})=>{
     return(
         <div style={{position:"relative"}}>
              <Exhibition
@@ -13,7 +13,7 @@ const MiniExhibition = ({category, className, id})=>{
                 className={"home-section"}
             /> 
             <div className={`see-all ${id}-link`}>
-                <Link to={`/${id}/`} className="underline-on-hover">
+                <Link to={`/${route}/`} className="underline-on-hover">
                     All {id}
                 </Link>
                 

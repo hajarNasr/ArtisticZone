@@ -45,7 +45,8 @@ exports.getAllCategoryItems = (req, res)=>{
         .sort({_id:"desc"})
         .then(items=>{
             if(limit){
-                items = items.slice(0, limit);
+                // fix this later
+                items = items.slice(0, 3);
             }
             return res.status(200).send(items)
         })

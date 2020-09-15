@@ -35,6 +35,7 @@ const Home = ()=>{
                     category = {obj.category}
                     key={obj.id}
                     id= {obj.id}
+                    route = {obj.className}
                     className= {`home-section ${obj.className}`}
             />
             )}
