@@ -30,7 +30,7 @@ export const signUp = (userInfo, history)=>{
         // start the signup process
         dispatch(authStartAction());
 
-        axios.post("/api/users/signup/", 
+        axios.post("https://artisticzone.herokuapp.com/api/users/signup/", 
         JSON.stringify(userInfo),
         config
         )
@@ -54,7 +54,7 @@ export const login = (userInfo, history)=>{
          // start the login process
          dispatch(authStartAction());
 
-        axios.post("/api/users/login/", 
+        axios.post("https://artisticzone.herokuapp.com/api/users/login/", 
         JSON.stringify(userInfo) ,
         config
         )
@@ -66,6 +66,7 @@ export const login = (userInfo, history)=>{
             history.push("/");
         })
         .catch(err=>{
+            console.log(err)
             dispatch(authFailLoginAction(err.response.data));
         })
     }
