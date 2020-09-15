@@ -26,7 +26,7 @@ const App = ()=>{
             <Route exact path= "/signup/" component={SignupPage}/>
 
             {categories.map(obj=>
-                <Route exact path= {`/${obj.id.toLowerCase()}/`} 
+                <Route exact path= {`/${obj.className}/`} 
                              key={`${obj.id} route`}
                              render = {()=><Exhibition
                                             category= {obj.category}
