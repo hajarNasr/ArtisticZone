@@ -1,0 +1,31 @@
+.header-left-side{
+    width:50% ;
+    position: absolute;
+    bottom:0;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #5B6A6E;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.header-left-side a{
+    color:rgb(87, 9, 9);
+    text-align: center;
+}
+.home-link{
+    border-bottom: 3px solid rgb(87, 9, 9);
+    font-size: 1.6rem;
+    margin-top:-5px;
+    width: 50px;
+
+}
+
+@media(max-width:600px){
+    .header-left-side{
+        font-size: 0.9rem;
+        left: 5px;
+        width:57% ;
+    }
+}

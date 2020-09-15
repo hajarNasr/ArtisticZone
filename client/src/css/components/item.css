@@ -1,0 +1,114 @@
+.item{
+    height:300px;
+    background-size: 100% 100%;
+    max-width: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(172, 166, 166, 0.753);
+    border-radius: 2px;
+    position: relative;
+}
+.item-price{
+    background-color: rgb(75, 82, 82);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top:5px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(221, 220, 220);
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.11);
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 10;
+} 
+ .img-source-src{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 99;
+    color: rgb(87, 9, 9);
+    cursor: pointer;
+    font-weight: bold;
+} 
+.img-source-link{
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.img-source-link a{
+    border-bottom: 2px solid rgb(177, 223, 231);
+    font-size: 1rem;
+    color: whitesmoke;
+    opacity: 0;
+}
+
+.img-source-src:hover + .img-source-link{
+    animation: change-height 0.5s ease-in-out 0s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+.img-source-src:hover + .img-source-link a{
+    opacity: 1;
+}
+.img-source-link:hover{
+    height: 100%;
+}
+.img-source-link:hover a{
+    opacity: 1;
+}
+
+@keyframes change-height{
+    from{
+        height:  0%;
+    }
+    to{
+        height: 100%
+    }
+}
+
+.item-bottom{
+    height: 38px;
+    width: 100%;
+    background-color:rgba(111, 122, 122, 0.925);
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: flex-end;
+    box-shadow: 2px 2px 2px 2px rgba(172, 166, 166, 0.753);
+}
+.trash-icon{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+}
+.item-bottom svg{
+   cursor: pointer;
+}
+.item-bottom-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.add-to-cart-icon:active, .remove-from-cart-icon:active{
+   animation: hide-show 0.5s ease-in-out 0s;
+}
+
+@keyframes hide-show{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+

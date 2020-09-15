@@ -1,0 +1,40 @@
+.toaster-wrapper{
+    position: fixed;
+    background-color: rgb(120, 152, 155);
+    width:22%;
+    height: 50px;
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    animation: dismiss 2.170s ease-in-out 0s;
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 236, 236);
+    font-size:1rem;
+    box-shadow: 1px 1px 1px 2px rgba(179, 186, 194, 0.096);
+    border-radius: 2px;
+}
+
+@keyframes dismiss{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+@media (max-width:1000px){
+    .toaster-wrapper{
+        width:40%;
+    } 
+}
+
+@media (max-width:600px){
+    .toaster-wrapper{
+        width:70%;
+    } 
+}

@@ -1,0 +1,37 @@
+.footer{
+  display:block;
+  height: 70px;
+  margin-left: 10%;
+  width: 90%;
+  background-color: #aeb1b1;
+}
+.footer div:first-child{
+  position: absolute;
+  bottom: 3px;
+  left:0;
+  right: 0;
+}
+
+.social-links{
+  list-style: none;
+  display: flex;
+  width:70%;
+  justify-content: space-evenly;
+  margin: auto;
+  color:whitesmoke;
+  font-size: 1.3rem;
+}
+.social-links li{
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+} 
+.social-links li:hover{
+  border-bottom: 3px solid whitesmoke;
+} 
+
+.copy{
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 5px;
+}

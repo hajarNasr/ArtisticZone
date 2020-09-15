@@ -1,0 +1,15 @@
+.items-list-wrapper{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding-bottom: 60px;
+    padding-top: 50px;
+    position: relative;
+}
+.paintings, .tapestry, .embroidery, .photography{
+    min-height: 90vh;
+    background-color: rgb(223, 219, 219);
+    margin-top: 100px;
+}
