@@ -54,3 +54,8 @@ export const useClearAuthErrors = ()=>{
     }, [dispatch])
 }
   
+export const useScrollToTop = () =>{
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, [])
+}

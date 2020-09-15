@@ -30,6 +30,7 @@
     width: 100px;
     height: 35px !important;
 }
+
 .header-auth-shopping-cart-wrapper a{
     color: rgb(60, 71, 75);
 }
@@ -54,6 +55,11 @@
     color:rgb(238, 236, 236);
     cursor: pointer;
 }
+
+.header__login:hover, .header__signup:hover{
+    background-color: rgb(121, 137, 141);
+}
+
 .header__signup{
     height: 120px;
     width: 75px; 

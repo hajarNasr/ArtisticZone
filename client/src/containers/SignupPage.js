@@ -4,13 +4,14 @@ import FormInput from '../components/FromInput';
 import { Button } from '../components/Buttons';
 import Header from '../layout/Header';
 import { signUp } from '../store/actions/authActions';
-import { useClearAuthErrors } from '../custom-hooks/CustomHooks';
+import { useClearAuthErrors, useScrollToTop } from '../custom-hooks/CustomHooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkErrors, getFormElements } from '../helpers';
 import '../css/components/forms.css';
 
 const SignupPage = () =>{
     useClearAuthErrors();
+    useScrollToTop();
     const dispatch = useDispatch();
     const state = useSelector(state=>state.authReducer);
     const history = useHistory();

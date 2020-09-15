@@ -42,7 +42,6 @@ export const signUp = (userInfo, history)=>{
             history.push("/");
         })
         .catch(err=>{
-            console.log(err)
             // pass the signup errors to the state
             dispatch(authFailSignupAction(err.response.data));
         })
@@ -66,7 +65,6 @@ export const login = (userInfo, history)=>{
             history.push("/");
         })
         .catch(err=>{
-            console.log(err)
             dispatch(authFailLoginAction(err.response.data));
         })
     }

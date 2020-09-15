@@ -24,7 +24,6 @@
     box-shadow: 1px 1px 1px 2px rgba(33, 68, 82, 0.2);
     min-width: 330px;
     padding-bottom: 15px;
-   
 }
 .login-form{
     min-height: 40%;
@@ -75,6 +74,9 @@
     cursor: pointer;
     border-radius: 15px;
     font-size:1rem;
+}
+.login-submit-btn:hover{
+    background-color: rgb(121, 137, 141);
 }
 .auth-err{
     text-align: center;

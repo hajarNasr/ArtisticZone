@@ -2,12 +2,13 @@ import React from 'react';
 import Header from '../layout/Header';
 import { categories } from '../helpers';
 import MiniExhibition from './MiniExhibition';
-import { useWindowSize } from '../custom-hooks/CustomHooks';
+import { useWindowSize, useScrollToTop } from '../custom-hooks/CustomHooks';
 import HomeNavbar from '../components/HomeNavbar';
 import Hamburger from '../components/Hamburger';
 
 const Home = ()=>{  
     const [ width, height ] = useWindowSize();
+    useScrollToTop();
     return(
         <div className="home-wrapper">
             <Header

@@ -5,8 +5,10 @@ import Header from '../layout/Header';
 import Item from '../components/Item';
 import Spinner from '../components/Spinner';
 import '../css/containers/exhibition.css'
+import { useScrollToTop } from '../custom-hooks/CustomHooks';
 
 const Exhibition = ({category, className, limit, id})=>{
+    useScrollToTop();
     let itemsList = useDbItems(category, limit);
     let {loading} = useSelector(state=>state.dbItemsReducer)
     return(
@@ -22,7 +24,6 @@ const Exhibition = ({category, className, limit, id})=>{
                <Spinner/>
                :
                 <div className="items-list-wrapper"> 
-                   {console.log(itemsList)}
                    {itemsList &&
                         itemsList.map(item=>
                             <Item

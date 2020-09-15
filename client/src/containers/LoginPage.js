@@ -6,12 +6,13 @@ import Header from '../layout/Header';
 import { login } from '../store/actions/authActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkErrors, getFormElements } from '../helpers';
-import { useClearAuthErrors } from '../custom-hooks/CustomHooks';
+import { useClearAuthErrors, useScrollToTop } from '../custom-hooks/CustomHooks';
 import '../css/components/forms.css';
 import '../css/containers/login-page.css';
 
 const LoginPage = () =>{
     useClearAuthErrors();
+    useScrollToTop();
     const dispatch = useDispatch();
     const state = useSelector(state=>state.authReducer);
     const history = useHistory();

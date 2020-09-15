@@ -37,10 +37,8 @@
     height: 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 50;
+    display: none;
 }
 .img-source-link a{
     border-bottom: 2px solid rgb(177, 223, 231);
@@ -53,12 +51,18 @@
     animation: change-height 0.5s ease-in-out 0s;
     animation-direction: alternate;
     animation-fill-mode: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img-source-src:hover + .img-source-link a{
     opacity: 1;
 }
 .img-source-link:hover{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img-source-link:hover a{
     opacity: 1;
@@ -99,7 +103,7 @@
     width: 100%;
 }
 
-.add-to-cart-icon:active, .remove-from-cart-icon:active{
+.add-to-cart-icon:active, .remove-from-cart-icon:active, .item{
    animation: hide-show 0.5s ease-in-out 0s;
 }
 

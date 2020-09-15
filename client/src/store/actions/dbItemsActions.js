@@ -38,7 +38,6 @@ export const getAllCategroyItems = (category, limit)=>{
                dispatch(allCategoryItemsAction(res.data));
              })
             .catch(err=>{
-               console.log(err);
                console.log(err.response);
             })
     }
@@ -57,7 +56,6 @@ export const getUserCartItems = (userId)=>{
                     dispatch(userCartItemsAction(res.data.cartItems));
                  })
                  .catch(err=>{
-                    console.log(err);
                     console.log(err.response)
                  })
          }
@@ -78,7 +76,6 @@ export const addToCart = (itemId)=>{
             
         })
         .catch(err=>{
-            console.log(err);
             console.log(err.response)
         })
 

@@ -63,7 +63,3 @@
     transform: translateX(-20px);
     transition: transform 0.5s ease-in-out;
 }
-
-@media(max-width:1000){
-    
-}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useModal } from '../custom-hooks/CustomHooks';
+import { useModal, useScrollToTop } from '../custom-hooks/CustomHooks';
 import ConfirmDeleteModal from '../components/ConfirmDeleteModal';
 import { FaShoppingCart } from '../components/FaIcons';
 import Header from '../layout/Header';
@@ -13,6 +13,7 @@ import '../css/containers/shopping-cart.css'
 
 const ShoppingCart = ()=>{
     const dispatch = useDispatch();
+    useScrollToTop();
     let {loading, cartItems, clearCartDone} = useSelector(state=>
                                                           state.dbItemsReducer);
 

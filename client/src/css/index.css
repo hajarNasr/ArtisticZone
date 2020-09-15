@@ -10,7 +10,7 @@ html, body {
   width: 100%;
   min-height: 100%; 
   position: relative;
-
+ overflow-x: hidden;
 }      
 a{
   text-decoration: none !important;
