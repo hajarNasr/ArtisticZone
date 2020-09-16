@@ -1,9 +1,26 @@
+
 const express = require("express"),
       cors = require('cors'),
       cookieParser = require('cookie-parser'),
       logger = require('morgan'),
       path = require('path'),
       createError = require('http-errors');
+
+
+function setNoCache(res= express.Response) {
+    const date = new Date();
+    date.setFullYear(date.getFullYear() - 1);
+    res.setHeader("Expires", date.toUTCString());
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Cache-Control", "public, no-cache");
+}
+
+function setLongTermCache(res= express.Response) {
+    const date = new Date();
+    date.setFullYear(date.getFullYear() + 1);
+    res.setHeader("Expires", date.toUTCString());
+    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+}      
 
 const compression = require('compression');
 
@@ -55,9 +72,25 @@ app.use("/api/items", require('./routes/ItemsRoutes'));
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
-  app.use(express.static('client/build'));
+  app.use(
+    express.static('client/build', {
+      extensions: ["html"],
+      setHeaders(res, path) {
+        if (path.match(/(\.html|\/sw\.js)$/)) {
+          setNoCache(res);
+          return;
+        }
+  
+        if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|json)$/)) {
+          setLongTermCache(res);
+        }
+      },
+    }),
+  );
+
 
   app.get('*', (req, res) => {
+    setNoCache(res);
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
