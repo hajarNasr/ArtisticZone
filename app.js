@@ -5,6 +5,8 @@ const express = require("express"),
       path = require('path'),
       createError = require('http-errors');
 
+const compression = require('compression');
+
 const dotenv = require("dotenv");
       dotenv.config();   
 
@@ -25,6 +27,7 @@ let app = express();
     app.use(cors());
     app.use(logger('dev'));
     app.use(cookieParser());
+    app.use(compression());
 
   /*   app.use(function(req, res, next) {
       next(createError(404));
