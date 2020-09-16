@@ -6,7 +6,6 @@ import { getFormElements } from '../helpers';
 import { useDispatch } from 'react-redux';
 import { adminAddNewItem } from '../store/actions/adminManageItemsActions';
 import { useScrollToTop } from '../custom-hooks/CustomHooks';
-import '../css/containers/admin-add-items-page.css';
 
 const AdminAddItemsPage = ()=>{
     const dispatch = useDispatch();

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HomeIcon } from '../components/FaIcons';
-import '../css/layout/header-left-side.css';
 
 const HeaderLeftSide = ({title})=>{
     return(

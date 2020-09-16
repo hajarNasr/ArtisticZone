@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Exhibition from './Exhibition';
-import '../css/containers/mini-exhibition.css';
 
 const MiniExhibition = ({category, route, id})=>{
     return(

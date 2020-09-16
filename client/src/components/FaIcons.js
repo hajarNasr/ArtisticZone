@@ -4,7 +4,6 @@ import {faShoppingCart, faHome, faSignOutAlt,
         faCaretDown, faCaretUp,
         faPlusCircle, faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 import {faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
-import '../css/components/fa-icons.css';
 
 export const FaShoppingCart = () =>(
     getFontAwesomeIcon(faShoppingCart, "shopping-cart")

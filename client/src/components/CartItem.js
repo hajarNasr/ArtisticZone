@@ -5,7 +5,6 @@ import { isAuthenticated } from '../helpers';
 import { AddToCartIcon, RemoveFromCartIcon } from './CartIcons';
 import { UpCaretIcon, DownCaretIcon, ExternalLinkIcon} from './FaIcons';
 import LazyLoadImage from './LazyLoadImage';
-import '../css/components/cart-item.css';
 import '../css/components/item.css';
 
 const CartItem = ({item})=>{

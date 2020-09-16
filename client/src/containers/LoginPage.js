@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkErrors, getFormElements } from '../helpers';
 import { useClearAuthErrors, useScrollToTop } from '../custom-hooks/CustomHooks';
 import '../css/components/forms.css';
-import '../css/containers/login-page.css';
 
 const LoginPage = () =>{
     useClearAuthErrors();
