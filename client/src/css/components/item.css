@@ -41,11 +41,12 @@
 } 
 .img-source-link{
     width: 100%;
-    height: 0;
+    height: 0; 
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 50;
     display: none;
+    top:0;
 }
 .img-source-link a{
     border-bottom: 2px solid rgb(177, 223, 231);
@@ -55,12 +56,12 @@
 }
 
 .img-source-src:hover + .img-source-link{
-    animation: change-height 0.5s ease-in-out 0s;
+     animation: change-height 0.5s ease-in-out 0s;
     animation-direction: alternate;
     animation-fill-mode: both;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
 }
 .img-source-src:hover + .img-source-link a{
     opacity: 1;
