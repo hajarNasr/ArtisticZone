@@ -5,15 +5,17 @@ import { isAuthenticated, isAdmin } from '../helpers';
 import ItemSettings from './ItemSettings';
 import { AddToCartIcon } from './CartIcons';
 import { ExternalLinkIcon } from './FaIcons';
+import LazyLoadImage from './LazyLoadImage';
 import '../css/components/item.css';
 
 const Item = ({item})=>{
     const dispatch = useDispatch();
 
     return (
-        <div style={{ backgroundImage: `url(${item.imgLink})` }}
-             className="item"
-            >
+        <div className="item">
+            <LazyLoadImage
+                imgLink = {item.imgLink}
+            />
             <div className="item-price">
                 {item.price}$
             </div>

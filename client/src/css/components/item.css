@@ -6,6 +6,13 @@
     border-radius: 2px;
     position: relative;
 }
+.item-img{
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
 .item-price{
     background-color: rgb(75, 82, 82);
     width: 50px;

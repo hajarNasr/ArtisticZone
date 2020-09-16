@@ -4,6 +4,7 @@ import { addToCart, removeFromCart, reduceItemQuantity } from '../store/actions/
 import { isAuthenticated } from '../helpers';
 import { AddToCartIcon, RemoveFromCartIcon } from './CartIcons';
 import { UpCaretIcon, DownCaretIcon, ExternalLinkIcon} from './FaIcons';
+import LazyLoadImage from './LazyLoadImage';
 import '../css/components/cart-item.css';
 import '../css/components/item.css';
 
@@ -21,9 +22,10 @@ const CartItem = ({item})=>{
         setQuantity(quantity-1);
     }
     return(
-        <div style={{ backgroundImage: `url(${item.imgLink})` }}
-        className="item"
-       >
+        <div className="item">
+        <LazyLoadImage
+             imgLink = {item.imgLink}
+       />
        <div className="item-price">
             {item.price}$
         </div>
